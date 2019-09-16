@@ -21,6 +21,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void showTextMessage(View view) {
-        userMsgTV.setText(userInputET.getText().toString());
+        if (!userInputET.getText().toString().isEmpty()) {
+            userMsgTV.setText(userInputET.getText().toString());
+        }
+    }
+
+    public void clearTextMessage(View view) {
+        userInputET.setText("");
     }
 }
